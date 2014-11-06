@@ -1,3 +1,9 @@
+#OSX setings
+*.DS_Store
+
+#dev settings
+local_settings.py
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
