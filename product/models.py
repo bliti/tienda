@@ -18,3 +18,6 @@ class Product(models.Model):
     
     #NOTE: images for the product will be handled
     # by another object and referenced 1-1. 
+    
+    def __unicode__(self):
+        return self.name
