@@ -3,6 +3,8 @@
 
 #dev settings
 local_settings.py
+migrations/
+
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
