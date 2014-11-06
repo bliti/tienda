@@ -16,7 +16,9 @@ class ProductTest(TestCase):
             shipping=5.99,
             name='Test Product',
             description='Its a test product.',
-            ships_to='USA'
+            ships_to='USA',
+            image='http://sunny95.com/wp-content/blogs.dir/16/files/2013/05/rick-astley.jpg',
+            video_link='https://www.youtube.com/watch?v=dQw4w9WgXcQ'
             )
         
         self.wrong_price = 9999999.999
@@ -72,6 +74,10 @@ class ProductTest(TestCase):
 
     def test_try_to_ship_product_to_other_country(self):
         self.assertNotEqual(self.product.ships_to, 'UK')
+
+
+    def test_image_is_not_served_from_static(self):
+        self.assertFalse(self.product.serve_image_from_static)
     
     
     def tearDown(self):
