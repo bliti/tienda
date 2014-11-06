@@ -1,6 +1,6 @@
-from django.conf.urls import patterns
+from django.conf.urls import patterns, url
 from .views import IndexView
 
 urlpatterns = patterns('',
-    (r'^$', IndexView.as_view()),
+    url(r'^$', IndexView.as_view(), name="index"),
 )
