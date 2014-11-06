@@ -13,3 +13,6 @@ Roadmap
 5. Work on address validation for shipping.
 
 6. Figure out buying rules for the store.
+
+7. Add social support for products. Like tweet after posting product, and
+allow users to tweet products. Etc.
