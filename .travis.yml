@@ -1,6 +1,11 @@
 language: python
 python:
   - "2.7"
+#environment variables
+env:
+  global:
+    - SECRET_KEY=1234567890
+
 # command to install dependencies
 install:
   - "pip install -r requirements.txt"
