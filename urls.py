@@ -12,5 +12,5 @@ urlpatterns = patterns('',
     url(r'^$', include('landing_page.urls')),
 
     #store
-    url(r'^store/$', include('store.urls')),
+    url(r'^store/', include('store.urls')),
 )
