@@ -8,4 +8,5 @@ class ProductList(ListView):
     company_name = settings.COMPANY_NAME
 
 
-class ProductDetail(DetailView)
+class ProductDetail(DetailView):
+    pass
