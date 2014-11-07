@@ -32,23 +32,23 @@ class StoreProductListIndexPageTest(TestCase):
     
     
     def test_store_index_page_request_returns_200(self):
-        response = self.client.get(reverse('store_index_product_list'))
+        response = self.client.get(reverse('store_index'))
         self.assertEqual(response.status_code, 200)
     
     
     def test_company_name_in_store_index_page(self):
-        response = self.client.get(reverse('store_index_product_list'))
+        response = self.client.get(reverse('store_index'))
         self.assertTrue(settings.COMPANY_NAME in response.content)
 
 
     def test_store_index_page_has_product_list(self):
-        response = self.client.get(reverse('store_index_product_list'))
+        response = self.client.get(reverse('store_index'))
         self.assertTrue('Products' in response.content)
 
     
     def test_store_index_page_product_list_has_product(self):
         product_url = reverse('product_detail', kwargs={'pk': self.product.pk})
-        response = self.client.get(reverse('store_index_product_list'))
+        response = self.client.get(reverse('store_index'))
         self.assertTrue(product_url in response.content)
 
 
