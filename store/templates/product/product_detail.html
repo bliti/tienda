@@ -9,21 +9,6 @@
 	<p>Shipping: {{object.shipping_as_decimal}}</p>
 	<br><br>
 
-
-	<form action="#" method="POST">
-	  <script
-	    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-	    data-key="pk_test_6pRNASCoBOKtIshFeQd4XMUh"
-	    data-image="/square-image.png"
-	    data-name="{{object.name}}"
-	    data-description="{{object.description}}"
-	    data-amount="{{object.price_with_shipping}}"
-		data-label="Purchase Now!"
-		data-zip-code="True"
-		>
-	  </script>
-	</form>
-
-	
+{% include "onlineorder_create_form.html" %}	
 </div>
 {% endblock %}
