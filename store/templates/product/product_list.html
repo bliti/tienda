@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block title %}{{view.company_name}} Store{% endblock %}
+{% block content %}
+<div class="container">
+    <h2>Products</h2>
+    <ul>
+        {% for product in object_list %}
+            <li>{{ product.name }}</li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

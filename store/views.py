@@ -1,3 +1,11 @@
-from django.shortcuts import render
+from django.views.generic import ListView, DetailView
+from django.conf import settings
+from product.models import Product
 
-# Create your views here.
+
+class ProductList(ListView):
+    model = Product
+    company_name = settings.COMPANY_NAME
+
+
+class ProductDetail(DetailView)

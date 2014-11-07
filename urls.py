@@ -10,4 +10,7 @@ urlpatterns = patterns('',
     
     #landing page
     url(r'^$', include('landing_page.urls')),
+
+    #store
+    url(r'^store/$', include('store.urls')),
 )
